@@ -69,7 +69,7 @@ Deux instances du composant `encoder` sont utilisées :
 - À chaque impulsion d’un encodeur, le compteur correspondant est mis à jour  
 - La position du curseur est ensuite utilisée pour écrire dans la mémoire vidéo  
 
-**Test du déplacement du pixel :**  
+**Test du déplacement du pixel : ( c'est un gif à regarder ) **  
 ![Déplacement](./Delpacement_pixel.gif)
 
 ---
@@ -88,7 +88,7 @@ La mémorisation du tracé est réalisée à l’aide d’une mémoire double po
 - Le contrôleur HDMI lit en continu la mémoire à l’adresse correspondant au pixel affiché  
 - Si la valeur lue est '1', le pixel est blanc, sinon il est noir  
 
-**Test de la mémorisation du tracé :**  
+**Test de la mémorisation du tracé : ( c'est un gif à regarder )**  
 ![Mémorisation](./memorisation.gif)
 
 ### Effacement de l’écran
@@ -100,7 +100,7 @@ Un processus dédié :
 - Écrit la valeur '0' dans chaque case  
 - Remet ainsi l’ensemble de l’écran à l’état noir  
 
-**Test de l’effacement :**  
+**Test de l’effacement : ( c'est un gif à regarder )**  
 ![Effacement](./effacement.gif)
 
 ---
