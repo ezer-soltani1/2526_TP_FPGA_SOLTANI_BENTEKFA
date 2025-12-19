@@ -70,7 +70,7 @@ Deux instances du composant `encoder` sont utilisées :
 - La position du curseur est ensuite utilisée pour écrire dans la mémoire vidéo  
 
 **Test du déplacement du pixel :**  
-![Déplacement](./Deplacement_pixel.gif)
+![Déplacement](./Delpacement_pixel.gif)
 
 ---
 
