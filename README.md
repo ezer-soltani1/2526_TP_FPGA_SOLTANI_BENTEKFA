@@ -12,7 +12,7 @@ Le projet est réalisé en plusieurs étapes :
 ### Gestion des encodeurs
 Dans cette partie, nous avons travaillé uniquement sur deux encodeurs A et B: 
 L'objectif est d'incrémenter la valeur d'un registre lorsque l'on tourne l'encodeur vers la droite, et de le décrémenter lorsqu'on le tourne vers la gauche
-![Bascules](images/bascume.png)
+![Bascules](./bascume.png)
 Les deux bascules D mémorisent le signal A à deux cycles d’horloge différents :
 - La première contient la valeur actuelle de A,
 - La seconde contient la valeur précédente.
@@ -30,14 +30,14 @@ Le déplacement du curseur est géré dans le fichier principal `telecran.vhd`. 
  - À chaque impulsion d'un encodeur, le compteur correspondant est mis à jour.                                   
  - La position du curseur est ensuite utilisée pour écrire dans la mémoire vidéo.
 voici le test du déplacement du pixel:
-![Deplacement](images/Deplacement_pixel.gif)                               
+![Deplacement](./Deplacement_pixel.gif)                               
                                                                                                                  
  ### Mémorisation du tracé et effacement de l’écran                                                              
  La mémorisation du tracé est réalisée à l'aide d'une mémoire double port (`dpram.vhd`).                         
  - **Écriture (Port A) :** La position actuelle du curseur (`s_x_counter`, `s_y_counter`) est convertie en une adresse linéaire, et la valeur '1' est écrite à cette adresse dans la RAM. Cela a pour effet de "dessiner" un pixel blanc à la position du curseur.                                                                             
 - **Lecture (Port B) :** Le contrôleur HDMI lit en continu la RAM à l'adresse correspondant au pixel actuellement affiché à l'écran. Si la valeur lue est '1', un pixel blanc est affiché, sinon un pixel noir.        
  voici le test de la mémorisation:
-![memo](images/memorisation.gif)                                                                                                                  
+![memo](./memorisation.gif)                                                                                                                  
  L'effacement de l'écran est déclenché par une pression sur le bouton poussoir de l'encodeur gauche. Un processus dédié parcourt alors toute la mémoire et écrit la valeur '0' dans chaque case, remettant ainsi l'écran au noir.
 voici le test de l'effacement:
-![effacement](images/effacement.gif)   
+![effacement](./effacement.gif)   
